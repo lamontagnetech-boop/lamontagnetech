@@ -1,0 +1,42 @@
+/* HTML & CSS module; scoped to avoid changing other LaMontagne Tech pages */
+.htmlcss-app{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:calc(100vh - 115px);background:#0b0f19;color:#f8fafc}
+.htmlcss-sidebar{background:#1e293b;border-right:1px solid #334155;min-width:0}
+.htmlcss-sidebar-title{padding:20px 16px;font-weight:700;letter-spacing:.06em;border-bottom:1px solid #334155}
+.htmlcss-ranks{padding:10px 0}.htmlcss-rank-button,.htmlcss-lesson{font:inherit;cursor:pointer;text-align:left;border:0;color:#cbd5e1;background:transparent;width:100%}
+.htmlcss-rank-button{display:flex;align-items:center;gap:12px;padding:12px 16px;border-left:4px solid transparent;font-size:.92rem}
+.htmlcss-rank-button:hover,.htmlcss-lesson:hover{background:#334155;color:white}.htmlcss-rank-button.selected{background:#0f172a;border-left-color:#38bdf8;color:white;font-weight:600}
+.htmlcss-rank-button .rank-chevron{margin-left:auto;font-size:.8rem}.htmlcss-lessons{padding:3px 0 8px 33px;background:#152033}.htmlcss-lessons[hidden]{display:none}
+.htmlcss-lesson{display:block;padding:9px 12px;font-size:.85rem;border-left:2px solid transparent}.htmlcss-lesson.selected{color:#7dd3fc;border-left-color:#38bdf8;background:#0f172a}
+.htmlcss-rank-button .rank-shield{width:13px;height:13px;border-radius:3px;flex-shrink:0;border:1px solid #ffffff44}
+
+.htmlcss-workspace{min-width:0;padding:22px}.htmlcss-workspace-head h2{margin:0 0 5px;font-size:1.45rem}.htmlcss-workspace-head p{margin:0 0 20px;color:#94a3b8}
+.htmlcss-columns{display:grid;grid-template-columns:minmax(260px,1fr) minmax(260px,1fr) minmax(230px,.75fr);gap:14px;align-items:stretch}
+.htmlcss-panel{min-width:0;background:#1e293b;border:1px solid #334155;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;min-height:560px}
+.htmlcss-panel-heading{padding:13px 16px;border-bottom:1px solid #334155;font-weight:700}.htmlcss-panel-heading span{float:right;color:#94a3b8;font-size:.8rem;font-weight:400}
+#programmingScreen{flex:1;min-height:430px;width:100%;resize:vertical;background:#0f172a;color:#e2e8f0;border:0;padding:18px;font:14px/1.55 Consolas,'Courier New',monospace;tab-size:4;outline-offset:-2px}
+.htmlcss-actions{display:flex;gap:10px;padding:12px;flex-wrap:wrap}.htmlcss-actions button{border:1px solid #475569;border-radius:7px;padding:9px 14px;background:#334155;color:white;cursor:pointer}.htmlcss-actions button:first-child{background:#0284c7;border-color:#0284c7}.htmlcss-actions button:hover{filter:brightness(1.18)}
+#outputFrame{border:0;background:white;flex:1;width:100%;min-height:450px}.htmlcss-guide{padding:16px;overflow:auto;max-height:640px;color:#cbd5e1;line-height:1.6;font-size:.92rem}.htmlcss-guide a{color:#7dd3fc}.htmlcss-guide .start{color:#4ade80}.htmlcss-guide .end{color:#fb7185}.htmlcss-guide .empty{color:#60a5fa}.htmlcss-guide .doctype{color:#c084fc}.htmlcss-guide .wordex,.htmlcss-guide .wordexl{border:1px solid #94a3b8}.htmlcss-guide .wordexl{float:left}
+@media(max-width:1450px){.htmlcss-columns{grid-template-columns:1fr 1fr}.htmlcss-guide-panel{grid-column:1/-1;min-height:180px}.htmlcss-guide{max-height:350px}}
+@media(max-width:850px){.htmlcss-app{grid-template-columns:1fr}.htmlcss-sidebar{border-right:0;border-bottom:1px solid #334155}.htmlcss-ranks{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}.htmlcss-columns{grid-template-columns:1fr}.htmlcss-guide-panel{grid-column:auto}.htmlcss-panel{min-height:300px}.htmlcss-workspace{padding:14px}}
+
+/* Exact per-rank shield colors from typing.html */
+.htmlcss-rank-button#b1 .rank-shield{background-color:#E8F5E9;}
+.htmlcss-rank-button#b2 .rank-shield{background-color:#A5D6A7;}
+.htmlcss-rank-button#b3 .rank-shield{background-color:#4CAF50;}
+.htmlcss-rank-button#b4 .rank-shield{background-color:#1B5E20;}
+.htmlcss-rank-button#i1 .rank-shield{background-color:#E3F2FD;}
+.htmlcss-rank-button#i2 .rank-shield{background-color:#64B5F6;}
+.htmlcss-rank-button#i3 .rank-shield{background-color:#1976D2;}
+.htmlcss-rank-button#a1 .rank-shield{background-color:#FFF3E0;}
+.htmlcss-rank-button#a2 .rank-shield{background-color:#FFB74D;}
+.htmlcss-rank-button#a3 .rank-shield{background-color:#E65100;}
+.htmlcss-rank-button#p1 .rank-shield{background-color:#F3E5F5;}
+.htmlcss-rank-button#p2 .rank-shield{background-color:#BA68C8;}
+.htmlcss-rank-button#p3 .rank-shield{background-color:#7B1FA2;}
+.htmlcss-rank-button#m1 .rank-shield{background-color:#F5F5F5;}
+.htmlcss-rank-button#m2 .rank-shield{background-color:#9E9E9E;}
+.htmlcss-rank-button#m3 .rank-shield{background-color:#000000;}
+
+/* Accordion arrows appear only for ranks containing lessons. */
+.htmlcss-rank-button .rank-chevron{display:inline-block;transition:transform .2s ease;}
+.htmlcss-rank-button[aria-expanded="true"] .rank-chevron{transform:rotate(180deg);}
